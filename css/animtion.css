@@ -1,0 +1,79 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #32c7c7ab;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+section h2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  line-height: 100vh;
+  color: red;
+  font-size: 70px;
+}
+.banner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+.banner .block {
+  position: relative;
+  display: block;
+  width: 5vw;
+  height: 5vh;
+  animation: animat 2s ease-in-out forwards;
+  animation-delay: 1s;
+}
+@keyframes animat {
+  0% {
+    transform: scale(0);
+    background: url(gax.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  100% {
+    transform: scale(1);
+    background: url(gax.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+section.active .banner .block {
+  animation: animatone 2s ease-in-out forwards;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+@keyframes animatone {
+  0% {
+    transform: scale(1);
+    background: url(gax.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  100% {
+    transform: scale(0);
+    background: url(gax.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
